@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, Box } from '@chakra-ui/react';
+import { Text, Box, Flex, Image} from '@chakra-ui/react';
 import ButtonInfo from '../buttonInfo.js';
 import { SlLayers } from 'react-icons/sl';
 import { CgNotes } from 'react-icons/cg';
@@ -36,27 +36,32 @@ const Sidebar = () => {
 	return (
 		<Box
 			height="100vh"
-			w="200px"
+			w="270px"
+            position='fixed'
 			borderRightRadius="20px"
 			padding="8px"
 			backgroundColor={'#FFFFFF'}
-			boxShadow={`2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),  6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),  12.5px 12.5px 10px rgba(0, 0, 0, 0.035),22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042)`}
+			boxShadow={'md'}
 		>
-			<Box margin="24px 0">
-				<Text fontSize="xl" fontWeight="bold" textAlign="center" mb="8px">
-					💸 Cash Clams
-				</Text>
-			</Box>
-			<Box alignItems="center">
+
+         <>
+         <Flex pt={'10px'} mb={'50px'} justifyContent={'center'} alignItems='center' gap='3px'>
+            <Image boxSize={'10'} className="image" alt="Image" src="https://c.animaapp.com/FUAPC6qq/img/image-1@2x.png" />
+            <Text fontSize='18px' fontWeight='400' whiteSpace='nowrap' letterSpacing='0' lineHeight='normal' fontFamily={'Helvetica, Inter'} fontWeight={'bold'} className="text-wrapper-7">Cash Clam</Text>
+          </Flex>
+			<Flex flexDir={'column'} alignItems="center">
 				{modules.map((module, i) => (
 					<ButtonInfo
 						text={module.name}
 						icon={module.icon}
 						key={i}
 						color="#8A8A8A"
+                        mb='20px'
+                        width='70%'
 					/>
 				))}
-			</Box>
+			</Flex>
+         </>
 		</Box>
 	);
 };
