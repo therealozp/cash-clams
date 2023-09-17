@@ -1,6 +1,8 @@
 'use client';
-import Welcome from '@/src/components/welcome/Welcome';
+import { Dashboard } from '@/src/pages/Dashboard';
 
 export default function Home() {
-	return <Welcome />;
+	return (
+		<Dashboard/>
+	)
 }
