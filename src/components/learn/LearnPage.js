@@ -11,42 +11,57 @@ import {
 	Grid,
 	FormControl,
 	FormLabel,
+	Heading,
 } from '@chakra-ui/react';
 import Layout from '../Layout';
 import { useMessages } from '@/context/MessagesContext';
+import { useTheme } from '@/context/ThemeContext';
 import prompt from '@/utils/getTopics';
+import { lessonsList } from '@/utils/constants';
 
-const LearnPage = () => {
+const ThemeWarning = ({ theme, onChange, submit, loading }) => {
+	return (
+		<Box mt="30px">
+			<Text fontSize={'3xl'}>
+				It look&apos;s like you haven&apos;t set a theme yet...
+			</Text>
+			<Text margin="16px 0">
+				Hit the &quot;Setting&quot; button on the sidebar to get started!
+			</Text>
+		</Box>
+	);
+};
+
+const Ready = ({ submit, loading }) => {
+	return (
+		<Box mt="30px">
+			<Text fontSize={'3xl'}>
+				{loading ? 'Working our magic...' : 'Ready to learn?'}
+			</Text>
+
+			<FormControl isRequired width="300px">
+				<Button
+					colorScheme="green"
+					onClick={submit}
+					isLoading={loading}
+					margin="16px 0"
+				>
+					Let&apos;s go!
+				</Button>
+			</FormControl>
+		</Box>
+	);
+};
+
+const LearnPage = ({ moduleID }) => {
 	const { messages, addMessage, resetMessages } = useMessages();
+	const { theme } = useTheme();
 	const containerRef = useRef(null);
-	const [theme, setTheme] = useState('');
 	const [response, setResponse] = useState('');
 	const [loading, setLoading] = useState(false);
 
-	const ThemeInput = () => {
-		return (
-			<Box>
-				<Text>
-					Hello there 👋 To start, customize your experience by entering a theme
-					you&apos;d like this to be about!
-				</Text>
-				<FormControl isRequired>
-					<FormLabel>Your Theme</FormLabel>
-					<Input
-						value={theme}
-						onChange={(e) => setTheme(e.target.value)}
-						placeholder="Pokemon"
-					/>
-					<Button onClick={submit} isLoading={loading}>
-						Submit
-					</Button>
-				</FormControl>
-			</Box>
-		);
-	};
-
 	const submit = async () => {
-		const themePrompt = prompt(1, theme);
+		const themePrompt = prompt(moduleID, theme);
 		const newMessages = [...messages, { role: 'user', content: themePrompt }];
 		setLoading(true);
 		console.log('Messages after prompt: ', newMessages);
@@ -67,17 +82,34 @@ const LearnPage = () => {
 		const content = data.body.text;
 		addMessage('assistant', content);
 		console.log(content);
-		containerRef.current.innerHTML = content;
+		containerRef.current.innerText = content;
+		setResponse(content);
 	};
 	return (
 		<Layout>
-			<Flex width="100%" height="100%" padding="16px" containerRef>
-				{response ? <ThemeInput /> : null}
+			<Flex
+				width="100%"
+				height="100%"
+				padding="16px"
+				justifyContent={'center'}
+				alignItems={'center'}
+				flexDirection={'column'}
+			>
+				<Heading marginBottom="32px">
+					Module {moduleID}: {lessonsList[moduleID - 1].name}
+				</Heading>
+
+				{response ? null : theme ? (
+					<Ready submit={submit} loading={loading} />
+				) : (
+					<ThemeWarning />
+				)}
+
 				<Box
 					ref={containerRef}
-					width="80%"
+					width="65%"
 					maxHeight="100%"
-					overflow={'scroll'}
+					overflowY={'scroll'}
 					visibility={response ? 'visible' : 'hidden'}
 				></Box>
 			</Flex>

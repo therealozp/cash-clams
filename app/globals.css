@@ -1,5 +1,28 @@
 body {
-	/* background-color: #f6ffed; */
+	background-color: #f6ffed;
 	margin: 0;
 	padding: 0;
+}
+/* For Webkit browsers (Chrome, Safari, etc.) */
+::-webkit-scrollbar {
+	width: 5px; /* Set the width of the scrollbar */
+	height: 5px; /* For horizontal scrollbars, set the height */
+}
+
+::-webkit-scrollbar-track {
+	background: #f1f1f1; /* Set the track color, it can be any color */
+}
+
+::-webkit-scrollbar-thumb {
+	background: green; /* Set the thumb color */
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #555; /* Set the thumb hover color, adjust as needed */
+}
+
+/* For Firefox */
+* {
+	scrollbar-width: thin; /* Set the width of the scrollbar */
+	scrollbar-color: green #f1f1f1; /* thumb and track color */
 }

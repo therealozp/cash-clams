@@ -1,5 +1,10 @@
 'use client';
+
 import { useState } from 'react';
+import { useMessages } from '@/context/MessagesContext';
+import { Flex, Box, Text, Button, Icon, Grid } from '@chakra-ui/react';
+import promptQuiz from '@/utils/getQuizData';
+import parseJSONfromString from '@/utils/parseJSON';
 
 // Sample quiz data
 const quizData = {
@@ -26,6 +31,32 @@ const quizData = {
 };
 
 export default function QuizPage() {
+	const [quizData, setQuizData] = useState(null);
+	const [loading, setLoading] = useState(false);
+	const { messages, addMessages, resetMessages } = useMessages();
+
+	const getQuestions = async () => {
+		setLoading(true);
+		const quizPrompt = promptQuiz(1, 'Pokemon');
+		const newMessages = [...messages, { role: 'user', content: quizPrompt }];
+		const res = await fetch('/api/generate', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify({
+				messages: newMessages,
+			}),
+		});
+		const data = await res.json();
+		const content = data.body.text;
+		console.log(content);
+		const parsedData = parseJSONfromString(content);
+		console.log(parsedData.questions.length);
+		setQuizData(parsedData.questions);
+		setLoading(false);
+	};
+
 	const [quizStarted, setQuizStarted] = useState(false);
 	const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
 	const [score, setScore] = useState(0);
@@ -58,7 +89,9 @@ export default function QuizPage() {
 		return (
 			<div>
 				<h1>Welcome to the Quiz!</h1>
-				<button onClick={handleStartQuiz}>Start Quiz</button>
+				<Button onClick={getQuestions} isLoading={loading}>
+					Start Quiz
+				</Button>
 			</div>
 		);
 	}

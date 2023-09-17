@@ -1,10 +1,5 @@
-import Index from '@/src/components/ChatbotUI/message';
+import App from '@/src/components/ChatbotUI/App';
 
-export default function Conversation() {
-	return (
-		<div>
-			<h1>Chatbox Page</h1>
-			<Index />
-		</div>
-	);
+export default function Home() {
+	return <App />;
 }

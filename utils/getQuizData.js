@@ -1,10 +1,10 @@
 import { lessonsList } from './constants';
 
-const prompt = (lessonNumber, theme) => {
+const promptQuiz = (lessonNumber, theme) => {
 	const message = `Please give me 10 quiz questions, each with 4 options, and one correct option, based on the topic "${
 		lessonsList[lessonNumber - 1].name
 	}" in terms of ${theme} and make sure they are closely relevant to Financial Literacy. Hint: the learner has only just learned the following topics: ${
-		lessonsList[lessonNumber].lessons
+		lessonsList[lessonNumber - 1].lessons
 	}
 Do NOT give me a reply of anything apart the quiz data. Please format your response in JSON so that its contents are strictly as a following format: 
     questions: [
@@ -25,4 +25,4 @@ Do NOT give me a reply of anything apart the quiz data. Please format your respo
 	return message;
 };
 
-export default prompt;
+export default promptQuiz;
