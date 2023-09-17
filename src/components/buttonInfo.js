@@ -1,6 +1,7 @@
 import { Flex, Box, Button } from '@chakra-ui/react';
+import Link from 'next/link';
 
-export default function Buttoninfo({ text, icon, flexContent, ...props }) {
+export default function Buttoninfo({ text, icon, flexContent, link, ...props }) {
 	return (
 		<>
 			{/* {!flexContent && <Divider />} */}
@@ -9,6 +10,8 @@ export default function Buttoninfo({ text, icon, flexContent, ...props }) {
 				backgroundColor="transparent"
 				padding="16px"
 				width="full"
+				as={Link}
+				href={link}
 				{...props}
 			>
 				<Flex

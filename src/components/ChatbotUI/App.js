@@ -37,6 +37,7 @@ function App() {
 							<img src="" atl="Send" />
 						</button>
 					</div>
+					<p>Chatgpt may do error</p>
 				</div>
 			</div>
 		</div>
