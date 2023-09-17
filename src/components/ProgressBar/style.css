@@ -1,0 +1,38 @@
+.progress-bar {
+  align-items: flex-start;
+  display: flex;
+  position: relative;
+  width: 320px;
+}
+
+.progress-bar .label-instance {
+  border-radius: 6px 0px 0px 6px !important;
+}
+
+.progress-bar .instance-node {
+  flex: 1 !important;
+  flex-grow: 1 !important;
+  width: unset !important;
+}
+
+.progress-bar .label-2 {
+  border-radius: unset !important;
+  overflow: unset !important;
+}
+
+.progress-bar .class {
+  background-color: #00a980 !important;
+}
+
+.progress-bar .class-2 {
+  background-color: #3bb800 !important;
+}
+
+.progress-bar .class-3 {
+  background-color: #3bb800 !important;
+  border-radius: 0px 6px 6px 0px !important;
+}
+
+.progress-bar .class-4 {
+  border-radius: 0px 6px 6px 0px !important;
+}

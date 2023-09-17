@@ -7,10 +7,12 @@ import { MessageProvider } from '@/context/MessagesContext';
 
 export function Providers({ children }) {
 	return (
+		<ChakraProvider>
 		<MessageProvider>
 			<CacheProvider>
-				<ChakraProvider>{children}</ChakraProvider>
+				{children}
 			</CacheProvider>
 		</MessageProvider>
+		</ChakraProvider>
 	);
 }

@@ -1,11 +1,12 @@
+'use client'
+
 import React from "react";
-import { HumaaansSpace } from "../../components/HumaaansSpace";
-import "./style.css";
+import { HumaaansSpace } from "../components/HumaaansSpace";
 import Sidebar from "@/src/components/sidebar/sidebar";
 import { Button, Flex, Link } from "@chakra-ui/react";
+import "../../styles/dashboardstyles.css"
 
-
-export const Dashboard = () => {
+export default function Dashboard () {
   return (
     <Flex>
     <Sidebar/>
@@ -74,7 +75,7 @@ export const Dashboard = () => {
               </div>
             </div>
           </Button>
-          <Button variant={'none'} className="div-wrapper">
+          <Button variant={'none'} as={Link} href="/desktop" className="div-wrapper">
             <div className="overlap-3">
               <div className="rectangle-3" />
               <img
