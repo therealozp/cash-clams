@@ -33,10 +33,10 @@ const Ready = ({ submit, loading }) => {
 	return (
 		<Box mt="30px">
 			<Text fontSize={'3xl'}>
-				{loading ? 'Working our magic...' : 'Ready to learn?'}
+				{loading ? 'Working our magic...(your wifi is a lil slow 💀)' : 'Ready to learn?'}
 			</Text>
 
-			<FormControl isRequired width="300px">
+			<FormControl isRequired >
 				<Button
 					colorScheme="green"
 					onClick={submit}
@@ -111,7 +111,7 @@ const LearnPage = ({ moduleID }) => {
 						visibility={response ? 'visible' : 'hidden'}
 					></Box>
 					{response ? (
-						<Button onClick={() => router.push(`/quiz/modules/${moduleID}`)}>
+						<Button p='5px' onClick={() => router.push(`/quiz/modules/${moduleID}`)}>
 							Test your skills
 						</Button>
 					) : null}
