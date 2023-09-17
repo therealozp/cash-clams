@@ -1,0 +1,551 @@
+.vector2Stroke {
+  position: absolute;
+  height: 31.79%;
+  width: 11.23%;
+  top: 49.17%;
+  right: 0;
+  bottom: 19.04%;
+  left: 88.77%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.july2024 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 91.04px;
+  height: 20.34px;
+}
+.vector2StrokeParent {
+  position: absolute;
+  height: 100%;
+  width: 32.42%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 67.58%;
+}
+.monthSelector,
+.myProgress {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.myProgress {
+  font-size: 20px;
+  display: flex;
+  color: #333;
+  align-items: center;
+  justify-content: center;
+  width: 122px;
+  height: 20px;
+}
+.monthSelector {
+  height: 7.32%;
+  width: 94.83%;
+  right: 5.17%;
+  bottom: 92.68%;
+}
+.mo,
+.tu {
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25.46px;
+  height: 19.95px;
+}
+.tu {
+  left: 48.17px;
+  width: 19.95px;
+}
+.th,
+.tu,
+.we {
+  position: absolute;
+  top: 0;
+  height: 19.95px;
+}
+.we {
+  left: 90.83px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25.46px;
+}
+.th {
+  left: 139px;
+  width: 21.33px;
+}
+.fr,
+.sa,
+.th {
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fr {
+  position: absolute;
+  top: 0;
+  left: 182.35px;
+  width: 16.51px;
+  height: 19.95px;
+}
+.sa {
+  left: 220.88px;
+  width: 20.64px;
+}
+.sa,
+.su,
+.weekdays {
+  position: absolute;
+  top: 0;
+  height: 19.95px;
+}
+.su {
+  left: 263.54px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20.64px;
+}
+.weekdays {
+  left: 0;
+  width: 284.19px;
+  color: #333;
+}
+.div,
+.div1 {
+  display: none;
+}
+.div {
+  position: absolute;
+  top: 0;
+  left: -136.93px;
+  font-weight: 500;
+  align-items: center;
+  justify-content: center;
+  width: 8.26px;
+  height: 19.95px;
+}
+.div1 {
+  left: -92.21px;
+  width: 10.32px;
+}
+.div1,
+.div2,
+.div3,
+.div4,
+.div5,
+.div6 {
+  position: absolute;
+  top: 0;
+  font-weight: 500;
+  align-items: center;
+  justify-content: center;
+  height: 19.95px;
+}
+.div2 {
+  left: -47.48px;
+  display: none;
+  width: 11.01px;
+}
+.div3,
+.div4,
+.div5,
+.div6 {
+  left: 0;
+  display: flex;
+  width: 8.26px;
+}
+.div4,
+.div5,
+.div6 {
+  left: 40.6px;
+  width: 10.32px;
+}
+.div5,
+.div6 {
+  left: 80.51px;
+  width: 11.01px;
+}
+.div6 {
+  left: 123.17px;
+}
+.div7,
+.div8,
+.div9,
+.week01 {
+  position: absolute;
+  top: 41.97px;
+  left: 145.19px;
+  width: 134.18px;
+  height: 19.95px;
+}
+.div7,
+.div8,
+.div9 {
+  top: 9.63px;
+  left: 0;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10.32px;
+}
+.div8,
+.div9 {
+  left: 44.73px;
+  width: 11.01px;
+}
+.div9 {
+  left: 90.83px;
+  width: 9.63px;
+}
+.currentDay,
+.currentDay1,
+.currentDay2,
+.currentDay3 {
+  position: absolute;
+  top: 0;
+  left: 122.48px;
+  border-radius: 50%;
+  background-color: #07f;
+  width: 38.53px;
+  height: 38.53px;
+}
+.currentDay1,
+.currentDay2,
+.currentDay3 {
+  top: 84.69px;
+  left: 164.06px;
+  background-color: #ff7e3e;
+}
+.currentDay2,
+.currentDay3 {
+  top: 41.69px;
+  left: 247.51px;
+  background-color: #16d03b;
+}
+.currentDay3 {
+  top: 42.69px;
+  left: 31.74px;
+  background-color: #ff1d86;
+}
+.div10 {
+  position: absolute;
+  top: 9.63px;
+  left: 136.24px;
+  font-weight: 500;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 11.01px;
+  height: 19.95px;
+}
+.currentDay4 {
+  position: absolute;
+  top: 0;
+  left: 164.22px;
+  border-radius: 50%;
+  background-color: #f0f7ff;
+  width: 38.53px;
+  height: 38.53px;
+}
+.div11 {
+  position: absolute;
+  top: 9.63px;
+  left: 177.53px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 11.01px;
+  height: 19.95px;
+}
+.currentDay5 {
+  position: absolute;
+  top: 0;
+  left: 205.22px;
+  border-radius: 50%;
+  background-color: #f0f7ff;
+  width: 38.53px;
+  height: 38.53px;
+}
+.div12 {
+  top: 9.63px;
+  left: 214.69px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18.58px;
+  height: 19.95px;
+}
+.div12,
+.div13,
+.week02 {
+  position: absolute;
+}
+.div13 {
+  top: 9.63px;
+  left: 258.73px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15.83px;
+  height: 19.95px;
+}
+.week02 {
+  top: 74.31px;
+  left: 7.57px;
+  width: 286.04px;
+  height: 123.22px;
+}
+.div14 {
+  left: 0;
+  width: 18.58px;
+}
+.div14,
+.div15,
+.div16,
+.div17,
+.div18,
+.div19,
+.div20 {
+  position: absolute;
+  top: 0;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 19.95px;
+}
+.div15 {
+  left: 45.41px;
+  color: #fff;
+  width: 18.58px;
+}
+.div16,
+.div17,
+.div18,
+.div19,
+.div20 {
+  left: 90.14px;
+  width: 19.27px;
+}
+.div17,
+.div18,
+.div19,
+.div20 {
+  left: 136.93px;
+  width: 18.58px;
+}
+.div18,
+.div19,
+.div20 {
+  left: 178.22px;
+}
+.div19,
+.div20 {
+  left: 218.82px;
+  width: 17.89px;
+}
+.div20 {
+  left: 261.48px;
+  color: #fff;
+  width: 18.58px;
+}
+.week03 {
+  top: 125.92px;
+  left: 3.44px;
+  width: 280.06px;
+}
+.div22,
+.div23,
+.week03 {
+  position: absolute;
+  height: 19.95px;
+}
+.div22 {
+  top: 0;
+  left: 44.04px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 21.33px;
+}
+.div23 {
+  left: 90.83px;
+  width: 18.58px;
+}
+.div23,
+.div24,
+.div25,
+.div26 {
+  top: 0;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.div24 {
+  position: absolute;
+  left: 135.56px;
+  width: 20.64px;
+  height: 19.95px;
+}
+.div25,
+.div26 {
+  width: 21.33px;
+}
+.div25 {
+  position: absolute;
+  left: 176.84px;
+  color: #fff;
+  height: 19.95px;
+}
+.div26 {
+  left: 217.44px;
+}
+.div26,
+.div27,
+.week04 {
+  position: absolute;
+  height: 19.95px;
+}
+.div27 {
+  top: 0;
+  left: 260.1px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20.64px;
+}
+.week04 {
+  top: 167.9px;
+  left: 3.44px;
+  width: 280.75px;
+}
+.div28 {
+  top: 0;
+  left: 0;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20.64px;
+}
+.div28,
+.div29,
+.div30,
+.div31 {
+  position: absolute;
+  height: 19.95px;
+}
+.div29 {
+  top: 0;
+  left: 46.1px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 19.95px;
+}
+.div30,
+.div31 {
+  width: 20.64px;
+}
+.div30 {
+  top: 0;
+  left: 90.83px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.div31 {
+  left: 136.93px;
+}
+.div31,
+.div32,
+.div33 {
+  top: 0;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.div32 {
+  position: absolute;
+  left: 178.22px;
+  width: 21.33px;
+  height: 19.95px;
+}
+.div33 {
+  left: 221.57px;
+  width: 18.58px;
+}
+.b,
+.div33,
+.week05 {
+  position: absolute;
+  height: 19.95px;
+}
+.b {
+  top: 0;
+  left: 261.48px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 22.71px;
+}
+.week05 {
+  top: 209.87px;
+  left: 2.06px;
+  width: 240.15px;
+}
+.weekdaysWeeks {
+  position: relative;
+  width: 293.61px;
+  height: 229.83px;
+}
+.calendarEvents {
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 313px;
+  height: 230px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  color: #666;
+  font-family: Inter;
+}
+.calendar {
+  position: relative;
+  width: 100%;
+  height: 278px;
+  text-align: center;
+  font-size: 16.51px;
+  color: #8a8a8a;
+  font-family: "Open Sans";
+}

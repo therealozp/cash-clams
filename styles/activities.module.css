@@ -1,0 +1,285 @@
+.seeAll,
+.trendingThemes {
+  position: absolute;
+  top: 0;
+  left: 13px;
+  font-size: 20px;
+  color: #333;
+}
+.seeAll {
+  top: 7px;
+  left: 259px;
+  font-size: 13px;
+  color: #7ab743;
+}
+.socialInsChild {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 20px;
+  background-color: #fff0f7;
+  width: 313px;
+  height: 100px;
+}
+.iconChevronLeft {
+  position: absolute;
+  top: 44px;
+  right: 14px;
+  width: 12px;
+  height: 12px;
+}
+.groupChild {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background-color: #ff1d86;
+  width: 50px;
+  height: 50px;
+}
+.b,
+.ellipseParent {
+  position: absolute;
+  top: 8px;
+  left: 11px;
+}
+.ellipseParent {
+  top: 4px;
+  left: 0;
+  width: 50px;
+  height: 50px;
+}
+.socialInsuranceTest {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 15px;
+  color: #333;
+}
+.am9,
+.groupItem,
+.schoolHallUniversity {
+  position: absolute;
+  top: 44px;
+  left: 0;
+}
+.am9,
+.groupItem {
+  top: 0;
+  left: 86px;
+}
+.groupItem {
+  top: 4px;
+  left: 75px;
+  border-radius: 50%;
+  background-color: #07f;
+  width: 6px;
+  height: 6px;
+}
+.thJuly2021Parent {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  width: 150px;
+  height: 14px;
+}
+.socialInsuranceTestParent {
+  position: absolute;
+  top: 0;
+  left: 57px;
+  width: 203px;
+  height: 58px;
+  text-align: left;
+  font-size: 10px;
+  color: #8a8a8a;
+}
+.groupParent {
+  position: absolute;
+  top: 21px;
+  left: 20px;
+  width: 260px;
+  height: 58px;
+}
+.advMathsChild,
+.groupInner,
+.socialIns {
+  position: absolute;
+  top: 177px;
+  left: 0;
+  width: 313px;
+  height: 100px;
+}
+.advMathsChild,
+.groupInner {
+  top: 0;
+  border-radius: 20px;
+  background-color: #f0fff3;
+}
+.groupInner {
+  border-radius: 50%;
+  background-color: #16d03b;
+  width: 50px;
+  height: 50px;
+}
+.advMathsAssignmentDueParent {
+  position: absolute;
+  top: 0;
+  left: 57px;
+  width: 210px;
+  height: 58px;
+  text-align: left;
+  font-size: 10px;
+  color: #8a8a8a;
+}
+.groupContainer {
+  position: absolute;
+  top: 21px;
+  left: 23px;
+  width: 267px;
+  height: 58px;
+}
+.advMaths,
+.drDipoChild,
+.groupChild1 {
+  position: absolute;
+  top: 302px;
+  left: 0;
+  width: 313px;
+  height: 100px;
+}
+.drDipoChild,
+.groupChild1 {
+  top: 0;
+  border-radius: 20px;
+  background-color: #fff5f0;
+}
+.groupChild1 {
+  border-radius: 50%;
+  background-color: #ff7e3e;
+  width: 50px;
+  height: 50px;
+}
+.rdJuly2021Parent {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  width: 155px;
+  height: 14px;
+}
+.drDiposTutorialClassParent {
+  position: absolute;
+  top: 0;
+  left: 57px;
+  width: 216px;
+  height: 58px;
+  text-align: left;
+  font-size: 10px;
+  color: #8a8a8a;
+}
+.groupDiv {
+  position: absolute;
+  top: 21px;
+  left: 20px;
+  width: 273px;
+  height: 58px;
+}
+.drDipo,
+.groupChild3,
+.lifeConChild {
+  position: absolute;
+  top: 427px;
+  left: 0;
+  width: 313px;
+  height: 100px;
+}
+.groupChild3,
+.lifeConChild {
+  top: 0;
+  border-radius: 20px;
+  background-color: #f0f7ff;
+}
+.groupChild3 {
+  border-radius: 50%;
+  background-color: #07f;
+  width: 50px;
+  height: 50px;
+}
+.b3 {
+  position: absolute;
+  top: 8px;
+  left: 18px;
+}
+.am92,
+.groupChild4,
+.th10th {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.am92,
+.groupChild4 {
+  left: 111px;
+}
+.groupChild4 {
+  top: 4px;
+  left: 100px;
+  border-radius: 50%;
+  background-color: #07f;
+  width: 6px;
+  height: 6px;
+}
+.th10thJuly2021Parent {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  width: 175px;
+  height: 14px;
+}
+.groupParent1,
+.lifeCon {
+  position: absolute;
+  top: 21px;
+  left: 16px;
+  width: 273px;
+  height: 58px;
+}
+.lifeCon {
+  top: 52px;
+  left: 0;
+  width: 313px;
+  height: 100px;
+}
+.scrollChild {
+  top: 0;
+  left: 0;
+  border-radius: 50px;
+  background-color: #eee;
+  height: 474px;
+}
+.scroll,
+.scrollChild,
+.scrollItem {
+  position: absolute;
+  width: 5px;
+}
+.scrollItem {
+  top: 0;
+  left: 0;
+  border-radius: 50px;
+  background-color: #7ab743;
+  height: 158.63px;
+}
+.scroll {
+  top: 53px;
+  left: 326px;
+  height: 474px;
+}
+.activities {
+  position: relative;
+  width: 100%;
+  height: 527px;
+  text-align: center;
+  font-size: 25px;
+  color: #fff;
+  font-family: "Open Sans";
+}
