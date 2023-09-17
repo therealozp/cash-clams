@@ -104,6 +104,20 @@ body {
 	font-size: 1.2rem;
 	display: flex;
 	align-items: flex-start;
+	text-align: justify;
+}
+
+.chatImg {
+	object-fit: cover;
+	width: 3.5rem;
+	margin-right: 2rem;
+	border-radius: 0, 5rem;
+}
+
+.bot {
+	background: rgba(28, 30, 58, 1);
+	width: fit-content;
+	border-radius: 0.5rem;
 }
 
 .chatFooter {
@@ -113,12 +127,7 @@ body {
 	padding: 2rem;
 	position: fixed;
 	bottom: 0; /* Stick to the bottom of the viewport */
-	background-color: rgba(
-		255,
-		255,
-		255,
-		0.8
-	); /* Add a background for visibility */
+	background-color: rgba(65, 54, 54, 0.8); /* Add a background for visibility */
 	backdrop-filter: blur(10px); /* Apply a slight blur to the background */
 	z-index: 1; /* Ensure it's above the content */
 }

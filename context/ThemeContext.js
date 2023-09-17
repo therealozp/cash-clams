@@ -25,7 +25,7 @@ export const ThemeProvider = ({ children }) => {
 
 	useEffect(() => {
 		// Save theme to local storage whenever it changes
-		if (Object.keys(theme).length !== 0) {
+		if (theme && Object.keys(theme).length !== 0) {
 			localStorage.setItem('theme', theme);
 		}
 	}, [theme]);

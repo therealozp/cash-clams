@@ -1,4 +1,4 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {"throwIfNamespace": false}
+const nextConfig = {};
 
-module.exports = nextConfig
+module.exports = nextConfig;

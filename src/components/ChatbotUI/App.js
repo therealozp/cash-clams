@@ -1,6 +1,7 @@
 import './App.css';
 //import logo from '';
 import { Button } from '@chakra-ui/react';
+import { Text } from '@chakra-ui/react';
 
 function App() {
 	return (
@@ -26,16 +27,24 @@ function App() {
 			</div>
 			<div className="main"></div>
 			<div className="chats">
-				<div className="chats">
-					<img src="" alt="" />
-					<p className="txt"></p>
+				<div className="chat">
+					<img src="" alt="User" />
+					<Text fontSize="10px" color="black">
+						Human
+					</Text>
+				</div>
+				<div className="chat">
+					<img src="" alt="Ai" />
+					<Text fontSize="10px" color="black">
+						Ai
+					</Text>
 				</div>
 				<div className="chatFooter">
 					<div className="inp">
 						<input type="text" placeholder="Send a messgae" />
-						<button className="send">
+						<Button className="send">
 							<img src="" atl="Send" />
-						</button>
+						</Button>
 					</div>
 					<p>Chatgpt may do error</p>
 				</div>

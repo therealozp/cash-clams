@@ -1,5 +1,5 @@
-import LearnPage from '@/src/components/learn/LearnPage';
+import Desktop from '@/src/pages/DesktopPage';
 
 export default function Learn() {
-	return <LearnPage />;
+	return <Desktop />;
 }

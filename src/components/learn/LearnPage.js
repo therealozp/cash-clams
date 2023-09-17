@@ -3,14 +3,10 @@
 import { useRef, useState } from 'react';
 import {
 	Flex,
-	Input,
 	Box,
 	Text,
 	Button,
-	Icon,
-	Grid,
 	FormControl,
-	FormLabel,
 	Heading,
 } from '@chakra-ui/react';
 import Layout from '../Layout';
@@ -18,12 +14,13 @@ import { useMessages } from '@/context/MessagesContext';
 import { useTheme } from '@/context/ThemeContext';
 import prompt from '@/utils/getTopics';
 import { lessonsList } from '@/utils/constants';
+import { useRouter } from 'next/navigation';
 
 const ThemeWarning = ({ theme, onChange, submit, loading }) => {
 	return (
 		<Box mt="30px">
 			<Text fontSize={'3xl'}>
-				It look&apos;s like you haven&apos;t set a theme yet...
+				It looks like you haven&apos;t set a theme yet...
 			</Text>
 			<Text margin="16px 0">
 				Hit the &quot;Setting&quot; button on the sidebar to get started!
@@ -59,6 +56,7 @@ const LearnPage = ({ moduleID }) => {
 	const containerRef = useRef(null);
 	const [response, setResponse] = useState('');
 	const [loading, setLoading] = useState(false);
+	const router = useRouter();
 
 	const submit = async () => {
 		const themePrompt = prompt(moduleID, theme);
@@ -104,14 +102,20 @@ const LearnPage = ({ moduleID }) => {
 				) : (
 					<ThemeWarning />
 				)}
-
-				<Box
-					ref={containerRef}
-					width="65%"
-					maxHeight="100%"
-					overflowY={'scroll'}
-					visibility={response ? 'visible' : 'hidden'}
-				></Box>
+				<>
+					<Box
+						ref={containerRef}
+						width="65%"
+						maxHeight="100%"
+						overflowY={'scroll'}
+						visibility={response ? 'visible' : 'hidden'}
+					></Box>
+					{response ? (
+						<Button onClick={() => router.push(`/quiz/modules/${moduleID}`)}>
+							Test your skills
+						</Button>
+					) : null}
+				</>
 			</Flex>
 		</Layout>
 	);

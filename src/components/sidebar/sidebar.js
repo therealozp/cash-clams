@@ -9,14 +9,15 @@ import {
 	AiOutlineHome,
 } from 'react-icons/Ai';
 import { GoHistory } from 'react-icons/Go';
+import Link from 'next/link';
 
 const modules = [
-	{ name: 'Home', icon: AiOutlineHome },
-	{ name: 'Modules', icon: SlLayers },
-	{ name: 'Notes', icon: CgNotes },
-	{ name: 'Schedule', icon: AiOutlineSchedule },
-	{ name: 'History', icon: GoHistory },
-	{ name: 'Settings', icon: AiOutlineSetting },
+	{ name: 'Home', icon: AiOutlineHome, href: '/' },
+	{ name: 'Modules', icon: SlLayers, href: '/learn' },
+	{ name: 'Notes', icon: CgNotes, href: '/' },
+	{ name: 'Schedule', icon: AiOutlineSchedule, href: '/' },
+	{ name: 'History', icon: GoHistory, href: '/' },
+	{ name: 'Settings', icon: AiOutlineSetting, href: '/' },
 ];
 
 const SidebarPlaceholder = () => {
@@ -64,17 +65,29 @@ const Sidebar = ({ onOpen }) => {
 					</Heading>
 				</Flex>
 				<Flex flexDir={'column'} alignItems="center">
-					{modules.map((module, i) => (
-						<ButtonInfo
-							text={module.name}
-							icon={module.icon}
-							key={i}
-							color="#8A8A8A"
-							mb="20px"
-							width="70%"
-							onClick={module.name == 'Settings' ? onOpen : null}
-						/>
-					))}
+					{modules.map((module, i) =>
+						module.name == 'Settings' ? (
+							<ButtonInfo
+								text={module.name}
+								icon={module.icon}
+								key={i}
+								color="#8A8A8A"
+								mb="20px"
+								width="70%"
+								onClick={onOpen}
+							/>
+						) : (
+							<Link key={i} href={`${module.href}`} style={{ width: '70%' }}>
+								<ButtonInfo
+									text={module.name}
+									icon={module.icon}
+									key={i}
+									color="#8A8A8A"
+									mb="20px"
+								/>
+							</Link>
+						)
+					)}
 				</Flex>
 			</>
 		</Box>
