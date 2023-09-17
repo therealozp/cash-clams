@@ -1,30 +1,29 @@
 // import { Configuration, OpenAIApi } from 'openai';
 import OpenAI from 'openai';
-import prompt from '@/utils/getTopics';
 import { NextResponse } from 'next/server';
-import { useMessages } from '@/context/MessagesContext';
 
 const openai = new OpenAI({
 	apiKey: process.env.OPENAI_API_KEY,
 });
 
-async function GET(req) {
-	const prompt = await req.body.prompt;
+async function POST(req) {
+	const request = await req.json();
+	const messages = request.messages;
 
-	const messages = useMessages();
 	const response = await openai.chat.completions.create({
 		model: 'gpt-3.5-turbo',
-		messages: [...messages, prompt],
+		messages: messages,
 	});
 
-	console.log(response.choices[0].message.content);
+	// console.log('this is from request api route:', messages);
 
 	return NextResponse.json({
 		status: 200,
 		body: {
 			text: response.choices[0].message.content,
+			// text: messages[0].content,
 		},
 	});
 }
 
-export { GET };
+export { POST };

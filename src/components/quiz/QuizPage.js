@@ -1,39 +1,50 @@
-function QuizPage() {
-	const quizPageText = 'Welcome to the Quiz!';
+import { useState } from 'react';
 
-	const divElement = document.createElement('div');
-	divElement.innerHTML = `
-      <h1>${quizPageText}</h1>
-      <button id="startQuizButton">Start Quiz</button>
-    `;
+export default function QuizPage() {
+	const [quizStarted, setQuizStarted] = useState(false);
+	const [questionNumber, setQuestionNumber] = useState(1);
 
-	document.body.appendChild(divElement);
+	const handleStartQuiz = () => {
+		setQuizStarted(true);
+	};
 
-	const startQuizButton = document.getElementById('startQuizButton');
-	startQuizButton.addEventListener('click', startQuiz);
-}
+	const handleCheckAnswer = (isCorrect) => {
+		if (isCorrect) {
+			alert('Correct answer!');
+		} else {
+			alert('Wrong answer. Try again.');
+		}
 
-function startQuiz() {
-	const quizContainer = document.createElement('div');
-	quizContainer.innerHTML = `
-      <h2>Question 1:</h2>
-      <p>What is the capital of France?</p>
-      <ul>
-        <li><button onclick="checkAnswer(true)">Paris</button></li>
-        <li><button onclick="checkAnswer(false)">London</button></li>
-        <li><button onclick="checkAnswer(false)">Berlin</button></li>
-      </ul>
-    `;
+		// Move to the next question (if needed)
+		setQuestionNumber(questionNumber + 1);
+	};
 
-	document.body.innerHTML = ''; // Clear the existing content
-	document.body.appendChild(quizContainer);
-}
-
-function checkAnswer(isCorrect) {
-	if (isCorrect) {
-		alert('Correct answer!');
-	} else {
-		alert('Wrong answer. Try again.');
+	if (!quizStarted) {
+		// Display the initial quiz page with the "Start Quiz" button
+		return (
+			<div>
+				<h1>Welcome to the Quiz!</h1>
+				<button onClick={handleStartQuiz}>Start Quiz</button>
+			</div>
+		);
 	}
+
+	// Display the quiz question and answer options
+	return (
+		<div>
+			<h2>Question {questionNumber}:</h2>
+			<p>What is the capital of France?</p>
+			<ul>
+				<li>
+					<button onClick={() => handleCheckAnswer(true)}>Paris</button>
+				</li>
+				<li>
+					<button onClick={() => handleCheckAnswer(false)}>London</button>
+				</li>
+				<li>
+					<button onClick={() => handleCheckAnswer(false)}>Berlin</button>
+				</li>
+			</ul>
+		</div>
+	);
 }
-export default QuizPage;
