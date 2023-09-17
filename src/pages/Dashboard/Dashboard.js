@@ -81,7 +81,7 @@ export const Dashboard = () => {
 						</div>
 					</div>
 				</Button>
-				<Button variant={'none'} className="div-wrapper">
+				<Button mt={'45px'} ml={'-20px'} variant={'none'} className="div-wrapper">
 					<div className="overlap-3">
 						<div className="rectangle-3" />
 						<img

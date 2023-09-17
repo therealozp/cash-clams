@@ -75,7 +75,7 @@ export default function Dashboard () {
               </div>
             </div>
           </Button>
-          <Button variant={'none'} as={Link} href="/desktop" className="div-wrapper">
+          <Button mt={'45px'} ml={'-20px'} variant={'none'} as={Link} href="/desktop" className="div-wrapper">
             <div className="overlap-3">
               <div className="rectangle-3" />
               <img
