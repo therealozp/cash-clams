@@ -1,0 +1,42 @@
+.v {
+  border-radius: 10px;
+  height: 55px;
+  overflow: hidden;
+  transform: rotate(90deg);
+  width: 53px;
+}
+
+.v .overlap {
+  background-color: #ffffff;
+  height: 200px;
+  width: 200px;
+}
+
+.v .x {
+  height: 200px;
+}
+
+.v .overlap-group {
+  height: 55px;
+  position: relative;
+  width: 53px;
+}
+
+.v .union {
+  height: 53px;
+  left: -1px;
+  position: absolute;
+  top: 1px;
+  transform: rotate(-90deg);
+  width: 55px;
+}
+
+.v .image {
+  height: 53px;
+  left: -1px;
+  object-fit: cover;
+  position: absolute;
+  top: 1px;
+  transform: rotate(-90deg);
+  width: 55px;
+}
